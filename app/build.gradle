@@ -17,6 +17,20 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    flavorDimensions "app"
+
+    productFlavors {
+        pago {
+            dimension "app"
+        }
+        gratuito {
+            dimension "app"
+            applicationIdSuffix ".gratuito"
+            versionNameSuffix "-gratuito"
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
